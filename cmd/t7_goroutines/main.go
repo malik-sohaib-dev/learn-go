@@ -18,11 +18,11 @@ func main() {
 	// Goroutines are functions that run concurrently with other functions
 
 	// Sequential execution: If we run the below code, it will run sequentially
-	// t0 := time.Now()
-	// for i := 0; i < len(sampleDB); i++ {
-	// 	dbCallSequential(i)
-	// }
-	// fmt.Println("Sequenctial Time taken: ", time.Since(t0))
+	t0 := time.Now()
+	for i := 0; i < len(sampleDB); i++ {
+		dbCallSequential(i)
+	}
+	fmt.Println("Sequential Time taken: ", time.Since(t0))
 
 	fmt.Println("-----------------------------")
 	// Concurrency using goroutines: If we add go keyword before the function call, it will run concurrently
